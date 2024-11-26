@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- For Resposive Device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Language Switcher - YAS Agro Industries</title>
+
+    <title>YAS AGRO INDUSTRIES - Premium Cattle Feed & Animal Nutrition</title>
 
     <!-- Favicon -->
     <link
@@ -15,117 +20,188 @@
 
     <!-- Main style sheet -->
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
-    <!-- Responsive style sheet -->
+    <!-- responsive style sheet -->
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
+    <!-- Fix Internet Explorer ______________________________________-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <style>
-     #google_translate_element {
-    position: relative;
-    top: 20px;
-    /* border: 2px solid red; */
-}
-
-
-      /* Mobile view responsiveness */
-      @media (max-width: 600px) {
-        #google_translate_element {
-          width: 180px; /* Smaller width on mobile */
-          height: 75px; /* Adjust height for mobile */
-          padding: 5px 10px;
-          margin-top: 20px;
-        }
-      }
-
-      /* Align the logo and navbar on the same line */
-      .theme-main-menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      /* Adjust the position of the Language Switcher */
-      #google_translate_element {
-        margin-left: 15px;
-        display: inline-block;
-        margin-top: 5px; /* Adjusted to move it slightly lower */
-      }
-    </style>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="resource/html5shiv.js"></script>
+      <script src="resource/respond.js"></script>
+    <![endif]-->
   </head>
+
+  <style>
+    /* Smaller sizes for mobile */
+    @media (max-width: 768px) {
+      img {
+        max-width: 120px; /* Reduce size on smaller screens */
+      }
+    }
+  </style>
   <body>
-    <header>
-      <div class="main-container">
-        <div class="container">
-          <div class="theme-main-menu">
-            <!-- Logo -->
-            <div class="logo">
-              <a href="index.html">
-                <img
-                  src="images/logo/WhatsApp_Image_2024-11-25_at_12.59.34_PM-removebg-preview.png"
-                  alt="logo"
-                  class="img-responsive"
-                  style="max-width: 150px; height: auto; margin-top: -5px"
-                />
-              </a>
-            </div>
-
-            <!-- Navbar -->
-            <nav class="navbar navbar-default">
-              <div class="navbar-header">
-                <button
-                  type="button"
-                  class="navbar-toggle collapsed"
-                  data-toggle="collapse"
-                  data-target="#navbar-collapse-1"
-                  aria-expanded="false"
-                >
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li class="dropdown-holder active">
-                    <a href="index.html">Home</a>
-                  </li>
-                  <li><a href="gallery-details.html">About Us</a></li>
-                  <li class="dropdown-holder">
-                    <a href="gallery-details.html">Products</a>
-                    <ul class="sub_menu">
-                      <li><a href="gallery-details.html">Sales</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="gallery-details.html">Careers</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-                  <!-- Language Switcher -->
-                  <li>
-                    <div id="google_translate_element"></div>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
+    <div class="main-page-wrapper">
+      <!-- ===================================================
+				Loading Transition
+			==================================================== -->
+      <div id="loader-wrapper">
+        <div id="loader"></div>
       </div>
-    </header>
+      <!-- /.loader-wrapper -->
 
+      <!-- 
+			=============================================
+				Theme Header
+			============================================== 
+			-->
+      <header>
+        <!-- /.container -->
+        <!-- ============================ Theme Menu ========================= -->
+        <div class="main-container">
+          <div class="container">
+            <div class="theme-main-menu">
+              <div class="logo float_left">
+                <a href="index.html">
+                  <img
+                    src="images/logo/WhatsApp_Image_2024-11-25_at_12.59.34_PM-removebg-preview.png"
+                    alt="logo"
+                    class="img-responsive"
+                    style="max-width: 150px; height: auto; margin-top: -5px"
+                  />
+                </a>
+              </div>
+              <!-- End of .logo -->
 
-    
+              <nav class="navbar navbar-default float_right">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button
+                    type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#navbar-collapse-1"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div
+                  class="collapse navbar-collapse float_left"
+                  id="navbar-collapse-1"
+                >
+                  <ul class="nav navbar-nav">
+                    <li class="dropdown-holder active">
+                      <a href="index.html">Home</a>
+                      <!-- <ul class="sub_menu">
+                        <li><a href="index.html">Home Version One</a></li>
+                        <li><a href="index.html">Home Version Two</a></li>
+                      </ul> -->
+                    </li>
+                    <li>
+                      <a href="gallery-details.html">About Us</a>
+                    </li>
+                    <li>
+                      <a href="gallery-details.html">Products</a>
+                    </li>
+                    <li>
+                      <a href="gallery-details.html">Sales</a>
+                    </li>
+                    <li>
+                      <a href="gallery-details.html">careers</a>
+                    </li>
+                    <li>
+                      <a href="gallery-details.html">News & Events</a>
+                    </li>
+                    <!-- <li class="dropdown-holder">
+                      <a href="#">Gallery</a>
+                      <ul class="sub_menu">
+                        <li><a href="gallery.html">Gallery Version One</a></li>
+                        <li>
+                          <a href="gallary-vs2.html">Gallery Version Two</a>
+                        </li>
+                        <li>
+                          <a href="gallery-vs3.html">Gallery Version Three</a>
+                        </li>
+                        <li>
+                          <a href="gallery-vs4.html">Gallery Version Four</a>
+                        </li>
+                        <li>
+                          <a href="gallery-details.html">Gallery Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-holder">
+                      <a href="#">Pages</a>
+                      <ul class="sub_menu">
+                        <li><a href="about-us.html">About Us V1</a></li>
+                        <li><a href="about-us-v2.html">About Us V2</a></li>
+                        <li><a href="error.html">Error</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-holder">
+                      <a href="#">Shop</a>
+                      <ul class="sub_menu">
+                        <li><a href="shop.html">Shop Page</a></li>
+                        <li><a href="shop-details.html">Shop Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-holder">
+                      <a href="#">Blog</a>
+                      <ul class="sub_menu">
+                        <li><a href="blog.html">Blog V1</a></li>
+                        <li><a href="blog-v2.html">Blog V2</a></li>
+                        <li><a href="blog-v3.html">Blog V3</a></li>
+                        <li><a href="blog-details.html">Blog Details V1</a></li>
+                        <li>
+                          <a href="blog-details-v2.html">Blog Details V2</a>
+                        </li>
+                      </ul>
+                    </li> -->
+                    <li><a href="contact.html">Contact us</a></li>
+                  </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+                <div class="search_option float_right">
+                  <button
+                    class="search tran3s dropdown-toggle"
+                    id="searchDropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                  <form
+                    action="#"
+                    class="p_color_bg dropdown-menu"
+                    aria-labelledby="searchDropdown"
+                  >
+                    <input type="text" placeholder="Search here....." />
+                    <button>
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
+                <!-- End of .search_option -->
+                <div class="clear_fix"></div>
+              </nav>
+              <!-- /.theme-main-menu -->
+              <div class="clear_fix"></div>
+            </div>
+            <!-- /.theme-main-menu -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.main-container -->
+      </header>
+      <!-- /.end header -->
+
       <!-- 
 			=============================================
 				Theme Main Banner
@@ -981,20 +1057,5 @@
       <script src="js/custom.js"></script>
     </div>
     <!-- /.main-page-wrapper -->
-  
-
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
-        );
-      }
-    </script>
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
   </body>
 </html>
