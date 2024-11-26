@@ -1347,15 +1347,23 @@ footer .bottom-footer form button {
 ====================================================================
  ***/
 .inner-page-banner {
-  background: url(../images/inner-page/innerpage.jpg) no-repeat center;
+  background: url(../images/inner-page/innerpage2.jpg) no-repeat center;
   background-size: cover;
+
 }
 .inner-page-banner-vs2{
   background: url(../images/inner-page/contact-us-6933645_1280.jpg) no-repeat center;
   background-size: cover;
 }
+
+
+.inner-page-banner-vs3{
+  background: url(../images/Products/WhatsApp\ Image\ 2024-11-22\ at\ 3.31.46\ PM.jpeg) no-repeat center;
+  background-size: cover;
+  height: 540px;
+}
 .inner-page-banner .opacity {
-  background: rgba(0,0,0,0.57);
+  /* background: rgba(0,0,0,0.57); */
   padding: 150px 0 18px 0;
 }
 .inner-page-banner .opacity h3 {
