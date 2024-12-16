@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquiry / Order Request</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+      }
+      .form-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 30px auto;
+      }
+      .form-title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .required {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container col-md-8">
+        <h2 class="form-title">Enquiry / Order Request</h2>
+        <p>
+          After you fill out this order request, we will contact you to discuss
+          details and availability before the order is completed. For quicker
+          service, contact us at
+          <a href="mailto:no_reply@example.com">no_reply@example.com</a> or call
+          (123) 456-7890.
+        </p>
+
+        <!-- Form Start -->
+        <form>
+          <!-- Customer Type -->
+          <div class="form-group">
+            <label
+              >1. Are you a new or existing customer?
+              <span class="required">*</span></label
+            >
+            <div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="customerType"
+                  id="newCustomer"
+                  value="new"
+                />
+                <label class="form-check-label" for="newCustomer"
+                  >I am a new customer</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="customerType"
+                  id="existingCustomer"
+                  value="existing"
+                />
+                <label class="form-check-label" for="existingCustomer"
+                  >I am an existing customer</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Selection -->
+          <div class="form-group">
+            <label
+              >2. What Products would you like to order?
+              <span class="required">*</span></label
+            >
+            <div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="product1"
+                  value="HIRAKNI MAKA GOLI"
+                />
+                <label class="form-check-label" for="product1"
+                  >HIRAKNI MAKA GOLI</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="product2"
+                  value="HIRAKNI MILKSHAKTI"
+                />
+                <label class="form-check-label" for="product2"
+                  >HIRAKNI MILKSHAKTI</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="product3"
+                  value="HIRAKNI GARBSHAKTI"
+                />
+                <label class="form-check-label" for="product3"
+                  >HIRAKNI GARBSHAKTI</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="product4"
+                  value="HIRAKNI BALSHAKTI"
+                />
+                <label class="form-check-label" for="product4"
+                  >HIRAKNI BALSHAKTI</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="product5"
+                  value="HIRAKNI 5 STAR"
+                />
+                <label class="form-check-label" for="product5"
+                  >HIRAKNI 5 STAR</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Quantity -->
+          <div class="form-group">
+            <label for="quantity"
+              >3. Product Quantity <span class="required">*</span></label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="quantity"
+              placeholder="Enter quantity"
+            />
+          </div>
+
+          <!-- Contact Information -->
+          <h5>Contact Info</h5>
+          <div class="form-group">
+            <label for="name"
+              >4. Your Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone"
+              >5. Phone Number <span class="required">*</span></label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">6. E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <!-- Preferred Contact Method -->
+          <div class="form-group">
+            <label
+              >7. Preferred Contact Method
+              <span class="required">*</span></label
+            >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="contactPhone"
+              />
+              <label class="form-check-label" for="contactPhone">Phone</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="contactEmail"
+              />
+              <label class="form-check-label" for="contactEmail">Email</label>
+            </div>
+          </div>
+
+          <!-- Questions or Comments -->
+          <div class="form-group">
+            <label for="comments">8. Questions and Comments</label>
+            <textarea
+              class="form-control"
+              id="comments"
+              rows="3"
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-block">
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

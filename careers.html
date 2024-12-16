@@ -253,7 +253,7 @@
                 margin: auto;
               "
             >
-              <form action="#" method="POST">
+              <form action="#" method="POST" enctype="multipart/form-data">
                 <h3
                   style="
                     font-family: Arial, Helvetica, sans-serif;
@@ -263,9 +263,10 @@
                     font-size: 24px;
                   "
                 >
-                  Career Form
+                  Job Application Form
                 </h3>
 
+                <!-- Full Name -->
                 <div class="form-group" style="margin-bottom: 15px">
                   <label
                     for="name"
@@ -274,7 +275,7 @@
                       font-weight: bold;
                       margin-bottom: 5px;
                     "
-                    >Full Name:</label
+                    >Name *</label
                   >
                   <input
                     type="text"
@@ -288,12 +289,40 @@
                       font-size: 16px;
                       border-radius: 4px;
                       border: 1px solid #ccc;
-                      transition: border-color 0.3s ease;
                     "
-                    placeholder="Enter your full name"
+                    placeholder="First and last name"
                   />
                 </div>
 
+                <!-- Location -->
+                <div class="form-group" style="margin-bottom: 15px">
+                  <label
+                    for="location"
+                    style="
+                      font-size: 16px;
+                      font-weight: bold;
+                      margin-bottom: 5px;
+                    "
+                    >Location *</label
+                  >
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    class="form-control"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 12px;
+                      font-size: 16px;
+                      border-radius: 4px;
+                      border: 1px solid #ccc;
+                    "
+                    placeholder="Enter your location"
+                  />
+                </div>
+
+                <!-- Email -->
                 <div class="form-group" style="margin-bottom: 15px">
                   <label
                     for="email"
@@ -302,7 +331,7 @@
                       font-weight: bold;
                       margin-bottom: 5px;
                     "
-                    >Email Address:</label
+                    >Email *</label
                   >
                   <input
                     type="email"
@@ -316,61 +345,26 @@
                       font-size: 16px;
                       border-radius: 4px;
                       border: 1px solid #ccc;
-                      transition: border-color 0.3s ease;
                     "
                     placeholder="Enter your email address"
                   />
                 </div>
 
-                <div class="form-group" style="margin-bottom: 25px">
+                <!-- Phone Number -->
+                <div class="form-group" style="margin-bottom: 15px">
                   <label
-                    for="position"
+                    for="phone"
                     style="
                       font-size: 16px;
                       font-weight: bold;
                       margin-bottom: 5px;
                     "
-                    >Position:</label
+                    >Phone Number *</label
                   >
-                  <select
-                    id="position"
-                    name="position"
-                    class="form-control"
-                    required
-                    style="
-                      width: 100%;
-                      padding: 22px;
-                      font-size: 16px;
-                      border-radius: 4px;
-                      border: 1px solid #ccc;
-                      transition: border-color 0.3s ease;
-                    "
-                  >
-                    <option value="" disabled selected>
-                      Select a position
-                    </option>
-                    <option value="Dealer">Dealer</option>
-                    <option value="Owner">Owner</option>
-                    <option value="Farmer">Farmer</option>
-                    <option value="Sales Executive">Sales Executive</option>
-                    <option value="Manager">Manager</option>
-                    <option value="Technician">Technician</option>
-                  </select>
-                </div>
-
-                <div class="form-group" style="margin-bottom: 20px">
-                  <label
-                    for="message"
-                    style="
-                      font-size: 16px;
-                      font-weight: bold;
-                      margin-bottom: 5px;
-                    "
-                    >Message:</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
                     class="form-control"
                     required
                     style="
@@ -379,14 +373,86 @@
                       font-size: 16px;
                       border-radius: 4px;
                       border: 1px solid #ccc;
-                      resize: none;
-                      height: 150px;
-                      transition: border-color 0.3s ease;
                     "
-                    placeholder="Write your message here"
-                  ></textarea>
+                    placeholder="Enter your phone number"
+                  />
                 </div>
 
+                <!-- Positions Heading -->
+                <h4
+                  style="
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Select a position
+                </h4>
+
+                <!-- Positions Dropdown -->
+                <div class="form-group" style="margin-bottom: 15px">
+                  <select
+                    id="position"
+                    name="position"
+                    class="form-control"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 20px;
+                      font-size: 16px;
+                      border-radius: 4px;
+                      border: 1px solid #ccc;
+                    "
+                  >
+                    <option value="" disabled selected>
+                      Select a position
+                    </option>
+                    <option value="Sales Officer">Sales Officer</option>
+                    <option value="Area Sales Manager">
+                      Area Sales Manager
+                    </option>
+                    <option value="Regional Sales Manager">
+                      Regional Sales Manager
+                    </option>
+                    <option value="Sales Head">Sales Head</option>
+                    <option value="Social Media Marketing Manager">
+                      Social Media Marketing Manager
+                    </option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Machine Operator">Machine Operator</option>
+                    <option value="Office Assistant">Office Assistant</option>
+                  </select>
+                </div>
+
+                <!-- Resume Upload -->
+                <div class="form-group" style="margin-bottom: 15px">
+                  <label
+                    for="resume"
+                    style="
+                      font-size: 16px;
+                      font-weight: bold;
+                      margin-bottom: 5px;
+                    "
+                    >Submit your cover letter or resume *</label
+                  >
+                  <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    class="form-control"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 8px;
+                      font-size: 16px;
+                      border-radius: 4px;
+                      border: 1px solid #ccc;
+                    "
+                  />
+                </div>
+
+                <!-- Submit Button -->
                 <button
                   type="submit"
                   class="btn btn-primary"

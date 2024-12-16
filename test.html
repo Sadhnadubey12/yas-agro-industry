@@ -3,998 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Language Switcher - YAS Agro Industries</title>
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="imges/jpg"
-      sizes="56x56"
-      href="images/logo/letter-y.png"
-    />
-
-    <!-- Main style sheet -->
-    <link rel="stylesheet" type="text/css" href="css/custom.css" />
-    <!-- Responsive style sheet -->
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <title>Inquiry Form</title>
     <style>
-     #google_translate_element {
-    position: relative;
-    top: 20px; /* Box ko niche le aayega */
-    /* border: 2px solid red; */
-}
-
-
-      /* Mobile view responsiveness */
-      @media (max-width: 600px) {
-        #google_translate_element {
-          width: 180px; /* Smaller width on mobile */
-          height: 75px; /* Adjust height for mobile */
-          padding: 5px 10px;
-          margin-top: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("travel-background.jpg") no-repeat center center fixed;
+        background-size: cover;
       }
-
-      /* Align the logo and navbar on the same line */
-      .theme-main-menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      .form-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
       }
-
-      .logo {
-        display: flex;
-        align-items: center;
+      .form-header {
+        text-align: center;
+        margin-bottom: 20px;
       }
-
-      /* Adjust the position of the Language Switcher */
-      #google_translate_element {
-        margin-left: 15px;
-        display: inline-block;
-        margin-top: 5px; /* Adjusted to move it slightly lower */
+      .contact-info {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #555;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .form-group textarea {
+        resize: none;
+      }
+      .submit-btn {
+        background-color: #5d56f1;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .submit-btn:hover {
+        background-color: #4a45d2;
+      }
+      .query-info {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+        color: #000;
+      }
+      .query-info a {
+        color: #5d56f1;
+        text-decoration: none;
+      }
+      .query-info a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="main-container">
-        <div class="container">
-          <div class="theme-main-menu">
-            <!-- Logo -->
-            <div class="logo">
-              <a href="index.html">
-                <img
-                  src="images/logo/WhatsApp_Image_2024-11-25_at_12.59.34_PM-removebg-preview.png"
-                  alt="logo"
-                  class="img-responsive"
-                  style="max-width: 150px; height: auto; margin-top: -5px"
-                />
-              </a>
-            </div>
-
-            <!-- Navbar -->
-            <nav class="navbar navbar-default">
-              <div class="navbar-header">
-                <button
-                  type="button"
-                  class="navbar-toggle collapsed"
-                  data-toggle="collapse"
-                  data-target="#navbar-collapse-1"
-                  aria-expanded="false"
-                >
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li class="dropdown-holder active">
-                    <a href="index.html">Home</a>
-                  </li>
-                  <li><a href="gallery-details.html">About Us</a></li>
-                  <li class="dropdown-holder">
-                    <a href="gallery-details.html">Products</a>
-                    <ul class="sub_menu">
-                      <li><a href="gallery-details.html">Sales</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="gallery-details.html">Careers</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-                  <!-- Language Switcher -->
-                  <li>
-                    <div id="google_translate_element"></div>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Inquiry Form</h2>
       </div>
-    </header>
-
-
-    
-      <!-- 
-			=============================================
-				Theme Main Banner
-			============================================== 
-			-->
-      <div id="theme-main-banner">
-        <div data-src="./images/inner-page/istockphoto-1224120970-612x612.jpg">
-          <div class="camera_caption">
-            <div class="container">
-              <p class="wow fadeInUp animated">
-                With over 8 years of Experience
-              </p>
-              <h1 class="wow fadeInUp animated" data-wow-delay="0.5s">
-                Yas Agro Industries
-              </h1>
-              <h3 class="wow fadeInUp animated" data-wow-delay="1s">
-                Premium Cattle Feed & Animal Nutrition
-              </h3>
-              <a
-                href="shop.html"
-                class="tran3s active round-border wow fadeInLeft animated hvr-shutter-out-horizontal-two"
-                data-wow-delay="1s"
-                >EShop</a
-              >
-              <a
-                href="contact.html"
-                class="tran3s round-border wow fadeInRight animated hvr-shutter-out-horizontal-two"
-                data-wow-delay="1s"
-                >Our Product</a
-              >
-            </div>
-            <!-- /.container -->
-          </div>
-          <!-- /.camera_caption -->
-        </div>
-        <div data-src="./images/inner-page/istockphoto-1224120970-612x612.jpg">
-          <div class="camera_caption">
-            <div class="container">
-              <p class="wow fadeInUp animated">
-                With over 10 years of Experience
-              </p>
-              <h1 class="wow fadeInUp animated" data-wow-delay="0.5s">
-                Yas Agro Industries
-              </h1>
-              <h3 class="wow fadeInUp animated" data-wow-delay="1s">
-                Premium Cattle Feed & Animal Nutrition
-              </h3>
-              <a
-                href="shop.html"
-                class="tran3s round-border wow fadeInLeft animated hvr-shutter-out-horizontal-two"
-                data-wow-delay="1s"
-                >EShop
-              </a>
-              <a
-                href="contact.html"
-                class="tran3s round-border wow fadeInRight animated hvr-shutter-out-horizontal-two"
-                data-wow-delay="1s"
-                >Our Product</a
-              >
-            </div>
-            <!-- /.container -->
-          </div>
-          <!-- /.camera_caption -->
-        </div>
-        <div data-src="./images/inner-page/istockphoto-1224120970-612x612.jpg">
-          <div class="camera_caption">
-            <div class="container">
-              <p class="wow fadeInUp animated">
-                With over 10 years of Experience
-              </p>
-              <h1 class="wow fadeInUp animated" data-wow-delay="0.5s">
-                Yas Agro Industries
-              </h1>
-              <h3 class="wow fadeInUp animated" data-wow-delay="1s">
-                Fresh, Organic and Seasonal Food for a healthy lifestyle
-              </h3>
-              <a
-                href="shop.html"
-                class="tran3s round-border wow fadeInLeft animated hvr-shutter-out-horizontal-two"
-                data-wow-delay="1s"
-                >EShop</a
-              >
-              <a
-                href="contact.html"
-                class="tran3s round-border wow fadeInRight animated hvr-shutter-out-horizontal-two"
-                data-wow-delay="1s"
-                >Our Product</a
-              >
-            </div>
-            <!-- /.container -->
-          </div>
-          <!-- /.camera_caption -->
-        </div>
+      <div class="contact-info">
+        <p><strong>License:</strong> XYZ12345</p>
+        <p><strong>Owner:</strong> Your Name</p>
+        <p><strong>Contact Email:</strong> sadhnakumari55555@gmail.com</p>
       </div>
-      <!-- /#theme-main-banner -->
-
-      <!-- 
-			=============================================
-				Sample-section
-			============================================== 
-			-->
-      <section class="sample-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-xm-12">
-              <div class="single-content tran3s">
-                <img
-                  src="images/gallary/WhatsApp_Image_2024-11-22_at_3.15.12_PM-removebg-preview.png"
-                  alt="img"
-                />
-                <div class="text">
-                  <h5>Premium Cattle Feed</h5>
-                  <p>With over 15 years of experience in animal nutrition</p>
-                </div>
-
-                <!-- /#text -->
-              </div>
-              <!-- /#single-content -->
-            </div>
-            <!-- /#col -->
-            <div class="col-md-4 col-sm-6 col-xm-12">
-              <div class="single-content tran3s">
-                <img
-                  src="images/gallary/WhatsApp_Image_2024-11-22_at_3.15.13_PM-removebg-preview.png"
-                  alt="img"
-                />
-                <div class="text text2">
-                  <h5>50% Off Cattle Feed</h5>
-                  <p>YAS AGRO Deal of the Day</p>
-                </div>
-
-                <!-- /#text -->
-              </div>
-              <!-- /#single-content -->
-            </div>
-            <!-- /#col -->
-            <div class="col-md-4 col-sm-4 col-xm-12 hidden-sm">
-              <div class="single-content tran3s">
-                <img
-                  src="images/gallary/WhatsApp_Image_2024-11-22_at_3.15.13_PM__1_-removebg-preview.png"
-                  alt="img"
-                />
-                <div class="text text2">
-                  <h5>Save Big</h5>
-                  <p>On Cattle Feed</p>
-                </div>
-
-                <!-- /#text -->
-              </div>
-              <!-- /#single-content -->
-            </div>
-            <!-- /#col -->
-          </div>
-          <!-- /#row -->
+      <form
+        action="mailto:sadhnakumari55555@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
         </div>
-        <!-- /#container -->
-      </section>
-      <!-- /#sample-section -->
-
-      <!-- 
-			=============================================
-				Farm Fresh Section
-			============================================== 
-			-->
-      <section class="farm-fresh">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-xm-12">
-              <h2>We Provide Premium Cattle Feed</h2>
-              <h6>
-                At YAS AGRO INDUSTRIES, we specialize in producing high-quality
-                cattle feed to ensure the health and well-being of your
-                livestock. Our feed is designed to support optimal growth, milk
-                production, and overall animal performance. We rely on proven,
-                healthy feeding methods to nurture our cattle, ensuring the best
-                nutrition for healthier, more productive animals.
-                <br />
-                With years of experience in animal nutrition, we are dedicated
-                to providing top-tier feed solutions.
-              </h6>
-              <a
-                href="about-us.html"
-                class="tran3s round-border wow fadeInRight animated hvr-shutter-out-horizontal-two"
-                data-wow-delay="1s"
-                >Know More</a
-              >
-            </div>
-
-            <!-- /#col -->
-            <div class="col-md-6 col-xm-12">
-              <img src="images/blog/blog1.jpg" alt="img" />
-            </div>
-            <!-- /#col -->
-          </div>
-          <!-- /#Row -->
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
         </div>
-        <!-- /#container -->
-      </section>
-      <!-- /#farm-fresh -->
-
-      <!-- 
-			=============================================
-				Counter Number Section
-			============================================== 
-			-->
-      <section class="counter-number">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 col-xs-6">
-              <div class="counter-box">
-                <i class="icon flaticon-business float_left"></i>
-                <h6>Tons of Cattle Feed Produced</h6>
-                <div class="number">
-                  <span
-                    class="timer"
-                    data-from="0"
-                    data-to="5000"
-                    data-speed="1500"
-                    data-refresh-interval="5"
-                    >0</span
-                  >
-                </div>
-              </div>
-              <!-- /.counter-box -->
-            </div>
-            <!-- /.col- -->
-
-            <div class="col-md-3 col-xs-6">
-              <div class="counter-box">
-                <i class="icon flaticon-rate float_left"></i>
-                <h6>Happy Farmers</h6>
-                <div class="number">
-                  <span
-                    class="timer"
-                    data-from="0"
-                    data-to="200"
-                    data-speed="1500"
-                    data-refresh-interval="5"
-                    >0</span
-                  >%
-                </div>
-              </div>
-              <!-- /.counter-box -->
-            </div>
-            <!-- /.col- -->
-
-            <div class="col-md-3 col-xs-6">
-              <div class="counter-box">
-                <i class="icon flaticon-construction float_left"></i>
-                <h6>Farms Served</h6>
-                <div class="number">
-                  <span
-                    class="timer"
-                    data-from="0"
-                    data-to="150"
-                    data-speed="1500"
-                    data-refresh-interval="5"
-                    >0</span
-                  >
-                </div>
-              </div>
-              <!-- /.counter-box -->
-            </div>
-            <!-- /.col- -->
-
-            <div class="col-md-3 col-xs-6">
-              <div class="counter-box">
-                <i class="icon flaticon-medal float_left"></i>
-                <h6>Years of Experience</h6>
-                <div class="number">
-                  <span
-                    class="timer"
-                    data-from="0"
-                    data-to="20"
-                    data-speed="1500"
-                    data-refresh-interval="5"
-                    >0</span
-                  >
-                </div>
-              </div>
-              <!-- /.counter-box -->
-            </div>
-            <!-- /.col- -->
-          </div>
-          <!-- /.row -->
+        <div class="form-group">
+          <label for="travel-type">Travel Type:</label>
+          <select id="travel-type" name="travel-type">
+            <option value="international">International</option>
+            <option value="domestic">Domestic</option>
+          </select>
         </div>
-        <!-- /.container -->
-      </section>
-
-      <!-- /.counter-number -->
-
-      <!-- 
-			=============================================
-				Best sale day Section
-			============================================== 
-			-->
-      <section class="best-sale">
-        <div class="container">
-          <h2>Best sale of the day</h2>
-          <h6>
-            We produce lots of vegetables in our Farm, you will get everything
-            Fresh. Also, the cows produce lots of Milk. We rely on<br />
-            healthy methods to nurture our cows. We are currently producing 150
-            liters of Milk every day. Also, for Gardening, our<br />
-            farmers are skilled, they understand very well how to grow organic
-            foods.
-          </h6>
-          <div id="client-slider" class="owl-carousel owl-theme owl-best-sale">
-            <div class="item">
-              <img
-                src="images/gallary/WhatsApp Image 2024-11-22 at 3.31.46 PM.jpeg"
-                alt="Image"
-              />
-            </div>
-            <!-- /.item -->
-            <div class="item">
-              <img
-                src="images/gallary/WhatsApp Image 2024-11-22 at 3.31.46 PM.jpeg"
-                alt="Image"
-              />
-            </div>
-            <!-- /.item -->
-          </div>
-          <!-- /.client-slider -->
-          <a
-            href="shop.html"
-            class="tran3s round-border wow fadeInRight animated hvr-shutter-out-horizontal-two"
-            data-wow-delay="1s"
-            >Shop Now</a
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Your Query</button>
+      </form>
+      <div class="query-info">
+        <p>
+          Send your query via email to:
+          <a href="mailto:sadhnakumari55555@gmail.com"
+            >sadhnakumari55555@gmail.com</a
           >
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /.best-sale -->
-
-      <!-- 
-			=============================================
-			  Product Section
-			============================================== 
-			-->
-
-      <!-- /.Organice-Product -->
-
-      <!-- 
-			=============================================
-				Testimonial Section
-			============================================== 
-			-->
-      <section class="testimonial">
-        <div class="opacity">
-          <div class="container">
-            <div class="main_title">
-              <h2>What Our Customers Say?</h2>
-            </div>
-            <!-- End of .main_title -->
-            <div class="owl-carousel owl-theme" id="testimonial-slider">
-              <!-- Testimonial 1 -->
-              <div class="item">
-                <div class="info_wrapper">
-                  <div class="client_info">
-                    <img
-                      src="images/inner-page/testimonial-1.jpg"
-                      alt="client"
-                      class="border_round float_left"
-                    />
-                    <div class="name float_left">
-                      <h6>Amit Deshmukh</h6>
-                      <span>Farmer & Cattle Owner</span>
-                    </div>
-                    <!-- End of .name -->
-                    <div class="clear_fix"></div>
-                  </div>
-                  <!-- End of .client_info -->
-                  <div class="brief-content">
-                    <h6>
-                      "YAS Agro Industries has greatly improved the health of my
-                      cattle. The premium cattle feed has boosted milk
-                      production, and I can see a visible difference in their
-                      overall health. Highly recommended for all farmers!"
-                    </h6>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <!-- End of .brief-content -->
-                </div>
-                <!-- End of .info_wrapper -->
-              </div>
-              <!-- End of .item -->
-
-              <!-- Testimonial 2 -->
-              <div class="item">
-                <div class="info_wrapper">
-                  <div class="client_info">
-                    <img
-                      src="images/inner-page/testimonial-2.jpg"
-                      alt="client"
-                      class="border_round float_left"
-                    />
-                    <div class="name float_left">
-                      <h6>Ravi Patil</h6>
-                      <span>Agro Supply Manager</span>
-                    </div>
-                    <!-- End of .name -->
-                    <div class="clear_fix"></div>
-                  </div>
-                  <!-- End of .client_info -->
-                  <div class="brief-content">
-                    <h6>
-                      "The quality of the cattle feed from YAS Agro is
-                      unmatched. Our dairy farm's production has increased, and
-                      the cattle are thriving on their high-quality, organic
-                      feed. It's a game-changer for our business!"
-                    </h6>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <!-- End of .brief-content -->
-                </div>
-                <!-- End of .info_wrapper -->
-              </div>
-              <!-- End of .item -->
-
-              <!-- Testimonial 3 -->
-              <div class="item">
-                <div class="info_wrapper">
-                  <div class="client_info">
-                    <img
-                      src="images/inner-page/testimonial-1.jpg"
-                      alt="client"
-                      class="border_round float_left"
-                    />
-                    <div class="name float_left">
-                      <h6>Neha Verma</h6>
-                      <span>Organic Farmer</span>
-                    </div>
-                    <!-- End of .name -->
-                    <div class="clear_fix"></div>
-                  </div>
-                  <!-- End of .client_info -->
-                  <div class="brief-content">
-                    <h6>
-                      "I have been using the organic fertilizers from YAS Agro
-                      for a few months now. The results are incredible. My crops
-                      are healthier, and I’m seeing a significant increase in
-                      yield. Truly the best for organic farming."
-                    </h6>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <!-- End of .brief-content -->
-                </div>
-                <!-- End of .info_wrapper -->
-              </div>
-              <!-- End of .item -->
-
-              <!-- Testimonial 4 -->
-              <div class="item">
-                <div class="info_wrapper">
-                  <div class="client_info">
-                    <img
-                      src="images/inner-page/testimonial-2.jpg"
-                      alt="client"
-                      class="border_round float_left"
-                    />
-                    <div class="name float_left">
-                      <h6>Shivani Yadav</h6>
-                      <span>Dairy Farmer</span>
-                    </div>
-                    <!-- End of .name -->
-                    <div class="clear_fix"></div>
-                  </div>
-                  <!-- End of .client_info -->
-                  <div class="brief-content">
-                    <h6>
-                      "The milk production from my cows has increased
-                      significantly since I started using YAS Agro's cattle
-                      feed. It’s rich in nutrients, and the cows seem much
-                      healthier and more energetic."
-                    </h6>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <!-- End of .brief-content -->
-                </div>
-                <!-- End of .info_wrapper -->
-              </div>
-              <!-- End of .item -->
-            </div>
-            <!-- End of .testimonial-slider -->
-          </div>
-          <!-- End of .container -->
-        </div>
-        <!-- End of .container -->
-      </section>
-
-      <!-- End of .container -->
-
-      <!-- 
-			=============================================
-				Latest News Section
-			============================================== 
-			-->
-      <section class="latest-news">
-        <div class="container">
-          <div class="latest-title">
-            <h2>Latest Updates</h2>
-          </div>
-          <!-- /.latest-title-->
-          <div class="row">
-            <!-- News Item 1 -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="latest-single-content">
-                <img
-                  src="images/gallary/WhatsApp Image 2024-11-22 at 3.31.46 PM.jpeg"
-                  alt="latest"
-                />
-                <div class="news-single-content wow fadeInUp animated">
-                  <h4>
-                    <a href="blog-details.html" class="tran3s"
-                      >Benefits of Organic Cattle Feed</a
-                    >
-                  </h4>
-                  <p>20 /11 /24</p>
-                  <p class="tran3s">
-                    Learn how switching to organic cattle feed boosts milk
-                    production and improves cattle health.
-                  </p>
-                </div>
-                <!-- /.news-single-content-->
-              </div>
-              <!-- /.latest-single-content-->
-            </div>
-            <!-- /.col- -->
-
-            <!-- News Item 2 -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="latest-single-content">
-                <img
-                  src="images/gallary/WhatsApp Image 2024-11-22 at 3.38.09 PM.jpeg"
-                  alt="latest"
-                />
-                <div class="news-single-content wow fadeInUp animated">
-                  <h4>
-                    <a href="blog-details.html" class="tran3s"
-                      >Sustainable Farming Practices for 2024</a
-                    >
-                  </h4>
-                  <p>18 /11 /24</p>
-                  <p class="tran3s">
-                    Discover how sustainable farming practices are
-                    revolutionizing crop yields and reducing environmental
-                    impact.
-                  </p>
-                </div>
-                <!-- /.news-single-content-->
-              </div>
-              <!-- /.latest-single-content-->
-            </div>
-            <!-- /.col- -->
-
-            <!-- News Item 3 -->
-            <div class="col-md-4 col-sm-6 col-xs-12 hidden-sm">
-              <div class="latest-single-content">
-                <img
-                  src="images/gallary/WhatsApp Image 2024-11-22 at 3.38.08 PM.jpeg"
-                  alt="latest"
-                />
-                <div class="news-single-content wow fadeInUp animated">
-                  <h4>
-                    <a href="blog-details.html" class="tran3s"
-                      >New Agricultural Technologies to Boost Productivity</a
-                    >
-                  </h4>
-                  <p>15 /11 /24</p>
-                  <p class="tran3s">
-                    A look into the latest agricultural technologies that help
-                    increase farm productivity and efficiency.
-                  </p>
-                </div>
-                <!-- /.news-single-content-->
-              </div>
-              <!-- /.latest-single-content-->
-            </div>
-            <!-- /.col- -->
-          </div>
-          <!-- /.row- -->
-        </div>
-        <!-- /.container-->
-      </section>
-
-      <!-- /.latest-news-->
-
-      <!-- 
-			=============================================
-			partners section
-			==============================================
-			-->
-      <div class="partners-section">
-        <div class="container">
-          <div class="row">
-            <div id="partners" class="owl-carousel owl-theme owl-partners">
-              <div class="item">
-                <img src="images/logo/prtn-logo-1.png" alt="partners" />
-              </div>
-              <!-- /.item-->
-              <div class="item">
-                <img src="images/logo/prtn-logo-2.png" alt="partners" />
-              </div>
-              <!-- /.item-->
-              <div class="item">
-                <img src="images/logo/prtn-logo-3.png" alt="partners" />
-              </div>
-              <!-- /.item-->
-              <div class="item">
-                <img src="images/logo/prtn-logo-4.png" alt="partners" />
-              </div>
-              <!-- /.item-->
-            </div>
-            <!-- /.owl-partners-->
-          </div>
-          <!-- /.row-->
-        </div>
-        <!-- /.container-->
+        </p>
       </div>
-      <!-- /.partners-section-->
-
-      <!-- 
-			=============================================
-				Footer
-			============================================== 
-			-->
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="footer-logo">
-                <div class="logo">
-                  <a href="index.html">
-                    <img
-                      src="images/logo/WhatsApp Image 2024-11-25 at 12.59.34 PM.jpeg"
-                      alt="Logo"
-                      class="img-responsive"
-                      style="max-width: 200px; height: 150px; margin-top: -45px"
-                    />
-                  </a>
-                </div>
-                <h6 style="margin-top: -25px">
-                  <span>YAS AGRO INDUSTRIES</span> The journey began when the
-                  founders, driven by their passion for livestock and
-                  sustainable farming practices, met up in 2016 over a shared
-                  vision of providing premium cattle feed and animal nutrition
-                  solutions. Their goal was to revolutionize the industry by
-                  offering high-quality, organic, and nutritious feed to ensure
-                  the health and well-being of livestock.
-                </h6>
-
-                <ul class="footer-icon">
-                  <li>
-                    <a
-                      href="https://www.facebook.com/share/12BSZ3Dpcoi/"
-                      target="_blank"
-                      class="tran3s"
-                    >
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="https://www.instagram.com/yasagro"
-                      target="_blank"
-                      class="tran3s"
-                    >
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://youtube.com/@yasagro2868"
-                      target="_blank"
-                      class="tran3s"
-                    >
-                      <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="footer-featured">
-                  <li><a href="#" class="tran3s">Privacy Policy</a></li>
-                  <li><a href="#" class="tran3s">Legal Policy</a></li>
-                </ul>
-              </div>
-              <!-- /.footer-logo -->
-            </div>
-            <!-- /.col- -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="footer-Useful-Links">
-                <h5>Important Links</h5>
-                <ul>
-                  <li><a href="#" class="tran3s">Support</a></li>
-                  <li><a href="about-us.html" class="tran3s">About us</a></li>
-                  <li><a href="#" class="tran3s">Project</a></li>
-                  <li><a href="shop.html" class="tran3s">Shop</a></li>
-                  <li><a href="#" class="tran3s">Performance</a></li>
-                  <li><a href="blog-v2.html" class="tran3s">News</a></li>
-                  <li><a href="#" class="tran3s">Food</a></li>
-                </ul>
-                <ul>
-                  <li><a href="#" class="tran3s">Fruits</a></li>
-                  <li><a href="#" class="tran3s">Our History</a></li>
-                  <li><a href="#" class="tran3s">What We Do</a></li>
-                  <li><a href="#" class="tran3s">Living Areas</a></li>
-                  <li><a href="#" class="tran3s">Vegetable</a></li>
-                  <li><a href="contact.html" class="tran3s">Contact us</a></li>
-                </ul>
-              </div>
-              <!-- /.footer-Useful-Links -->
-            </div>
-            <!-- /.col- -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="footer-Update">
-                <h5
-                  style="
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-bottom: 15px;
-                  "
-                >
-                  News Update
-                </h5>
-                <div class="footer-News"></div>
-                <!-- /.footer-News- -->
-                <div class="footer-News">
-                  <h6 style="font-size: 16px; font-weight: normal">
-                    <a
-                      href="blog-details-v2.html"
-                      class="tran3s"
-                      style="text-decoration: none; color: white"
-                    >
-                      Prefinished Engineered Hardwood<br />
-                      Flooring
-                    </a>
-                  </h6>
-                  <p style="font-size: 14px; margin: 5px 0">January 07, 2016</p>
-                </div>
-                <!-- /.footer-News -->
-
-                <!-- New Section: Address, GST, and PAN -->
-                <div class="footer-Address" style="margin-top: 20px">
-                  <h5
-                    style="
-                      font-size: 18px;
-                      font-weight: bold;
-                      margin-bottom: 10px;
-                    "
-                  >
-                    Contact Information
-                  </h5>
-                  <p style="font-size: 14px; margin: 5px 0">
-                    <strong>Yas AGRO INDUSTRIES</strong>
-                  </p>
-                  <p style="font-size: 14px; margin: 5px 0">
-                    22/1/C, Angar-Wafale Road, Khandobachiwadi,<br />
-                    Tal-Mohol, Dist-Solapur - 413214
-                  </p>
-                  <p style="font-size: 14px; margin: 5px 0">
-                    <strong>GST:</strong> 27BFHPC9200F1ZT
-                  </p>
-                  <p style="font-size: 14px; margin: 5px 0">
-                    <strong>PAN No:</strong> AABFY8322J
-                  </p>
-                </div>
-                <!-- /.footer-Address -->
-              </div>
-              <!-- /.footer-Update -->
-            </div>
-
-            <!-- /.col- -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-
-        <!-- Bottom Footer -->
-        <div class="bottom-footer">
-          <div class="container">
-            <div class="float_left">
-              <p>
-                Copyright © 2016
-                <a
-                  href="https://yourwebsite.com"
-                  class="tran3s p-color"
-                  target="_blank"
-                >
-                </a>
-                All Rights Reserved by
-                <a
-                  href="https://yourwebsite.com"
-                  class="p-color tran3s"
-                  target="_blank"
-                >
-                  YAS AGRO INDUSTRIES</a
-                >
-              </p>
-            </div>
-
-            <!-- /.float-left -->
-            <div class="float_right">
-              <form action="#">
-                <input type="text" placeholder="Your email" />
-                <button class="hvr-shutter-out-horizontal">Subscribe</button>
-              </form>
-            </div>
-            <!-- /.float-right -->
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- /.bottom-footer -->
-      </footer>
-      <!-- /.End-footer -->
-
-      <!-- Scroll Top Button -->
-      <button class="scroll-top">
-        <i class="fa fa-angle-up" aria-hidden="true"></i>
-      </button>
-
-      <!-- Js File_________________________________ -->
-      <!-- JS offline library -->
-      <script src="js/jquery.2.2.3.min.js"></script>
-      <!-- bootstrap js -->
-      <script src="resource/bootstrap/js/bootstrap.min.js"></script>
-      <!-- Camera js -->
-      <script src="resource/Camera-master/scripts/camera.min.js"></script>
-      <script src="resource/Camera-master/scripts/jquery.easing.1.3.js"></script>
-      <!-- Owl carousel css-->
-      <script src="resource/OwlCarousel/dist/owl.carousel.min.js"></script>
-      <!-- js count to -->
-      <script type="text/javascript" src="resource/jquery.appear.js"></script>
-      <script type="text/javascript" src="resource/jquery.countTo.js"></script>
-      <!-- mixitUp -->
-      <script
-        type="text/javascript"
-        src="resource/jquery.mixitup.min.js"
-      ></script>
-      <!-- fancy box -->
-      <script
-        type="text/javascript"
-        src="resource/fancybox/dist/jquery.fancybox.min.js"
-      ></script>
-      <!-- wow Animation -->
-      <script src="resource/WOW-master/dist/wow.js"></script>
-      <!-- Custom Js -->
-      <script src="js/custom.js"></script>
     </div>
-    <!-- /.main-page-wrapper -->
-  
-
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
-        );
-      }
-    </script>
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
   </body>
 </html>
