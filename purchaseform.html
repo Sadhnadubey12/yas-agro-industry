@@ -1,128 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Purchase Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f8f9fa;
-            color: #333;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
 
-        h2 {
-            text-align: center;
-            color: #2c3e50;
-        }
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+      }
 
-        form {
-            background: #ffffff;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+      form {
+        background: #ffffff;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
 
-        input[type="text"], input[type="email"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-        }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
 
-        input[type="radio"] {
-            margin-right: 8px;
-        }
+      input[type="radio"] {
+        margin-right: 8px;
+      }
 
-        .radio-group label {
-            font-weight: normal;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
+      .radio-group label {
+        font-weight: normal;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
 
-        button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            display: block;
-            margin: 0 auto;
-        }
+      button {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 0 auto;
+      }
 
-        button:hover {
-            background-color: #2980b9;
-        }
+      button:hover {
+        background-color: #2980b9;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Purchase Form</h2>
     <form id="purchaseForm">
-        <!-- Name of Firm -->
-        <div>
-            <label for="firmName">Name of firm <span style="color: red;">*</span></label>
-            <input type="text" id="firmName" name="firmName" placeholder="Enter your firm name" required>
-        </div>
+      <!-- Name of Firm -->
+      <div>
+        <label for="firmName"
+          >Name of firm <span style="color: red">*</span></label
+        >
+        <input
+          type="text"
+          id="firmName"
+          name="firmName"
+          placeholder="Enter your firm name"
+          required
+        />
+      </div>
 
-        <!-- Raw Material -->
-        <div>
-            <label>Raw Material <span style="color: red;">*</span></label>
-            <div class="radio-group">
-                <label><input type="radio" name="rawMaterial" value="Maize" required> Maize</label>
-                <label><input type="radio" name="rawMaterial" value="DORB"> DORB</label>
-                <label><input type="radio" name="rawMaterial" value="Cotton Doc"> Cotton Doc</label>
-                <label><input type="radio" name="rawMaterial" value="Mustard Doc"> Mustard Doc</label>
-                <label><input type="radio" name="rawMaterial" value="Maize DDGS"> Maize DDGS</label>
-                <label><input type="radio" name="rawMaterial" value="Rice DDGS"> Rice DDGS</label>
-                <label><input type="radio" name="rawMaterial" value="Groundnut DOC"> Groundnut DOC</label>
-                <label><input type="radio" name="rawMaterial" value="Rice Bran"> Rice Bran</label>
-                <label><input type="radio" name="rawMaterial" value="Other"> Other</label>
-            </div>
+      <!-- Raw Material -->
+      <div>
+        <label>Raw Material <span style="color: red">*</span></label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="rawMaterial" value="Maize" required />
+            Maize</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="DORB" /> DORB</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="Cotton Doc" /> Cotton
+            Doc</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="Mustard Doc" />
+            Mustard Doc</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="Maize DDGS" /> Maize
+            DDGS</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="Rice DDGS" /> Rice
+            DDGS</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="Groundnut DOC" />
+            Groundnut DOC</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="Rice Bran" /> Rice
+            Bran</label
+          >
+          <label
+            ><input type="radio" name="rawMaterial" value="Other" />
+            Other</label
+          >
         </div>
+      </div>
 
-        <!-- Contact Details -->
-        <div>
-            <label for="contactDetails">Contact Details <span style="color: red;">*</span></label>
-            <input type="text" id="contactDetails" name="contactDetails" placeholder="Enter your contact details" required>
-        </div>
+      <!-- Contact Details -->
+      <div>
+        <label for="contactDetails"
+          >Contact Details <span style="color: red">*</span></label
+        >
+        <input
+          type="text"
+          id="contactDetails"
+          name="contactDetails"
+          placeholder="Enter your contact details"
+          required
+        />
+      </div>
 
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
     </form>
 
     <script>
-        // JavaScript to handle form submission
-        document.getElementById("purchaseForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
+      // JavaScript to handle form submission
+      document
+        .getElementById("purchaseForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
 
-            // Collect form data
-            const firmName = document.getElementById("firmName").value;
-            const rawMaterial = document.querySelector('input[name="rawMaterial"]:checked').value;
-            const contactDetails = document.getElementById("contactDetails").value;
+          // Collect form data
+          const firmName = document.getElementById("firmName").value;
+          const rawMaterial = document.querySelector(
+            'input[name="rawMaterial"]:checked'
+          ).value;
+          const contactDetails =
+            document.getElementById("contactDetails").value;
 
-            // Display collected data in console (You can process it further)
-            console.log("Firm Name:", firmName);
-            console.log("Raw Material:", rawMaterial);
-            console.log("Contact Details:", contactDetails);
+          // Construct the mailto URL with form data
+          const mailtoLink =
+            "mailto:sales@yasagro.com" +
+            "?subject=Purchase Inquiry" +
+            "&body=" +
+            "Firm Name: " +
+            firmName +
+            "%0D%0A" +
+            "Raw Material: " +
+            rawMaterial +
+            "%0D%0A" +
+            "Contact Details: " +
+            contactDetails;
 
-            // Alert to confirm submission
-            alert("Form submitted successfully!");
+          // Open the email client with the populated mailto link
+          window.location.href = mailtoLink;
+
+          // Optional: Display confirmation message
+          alert(
+            "Your form has been submitted. Please check your email client to send the details."
+          );
         });
     </script>
-</body>
+  </body>
 </html>

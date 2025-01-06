@@ -43,7 +43,7 @@
         </p>
 
         <!-- Form Start -->
-        <form>
+        <form id="orderForm">
           <!-- Customer Type -->
           <div class="form-group">
             <label
@@ -58,6 +58,7 @@
                   name="customerType"
                   id="newCustomer"
                   value="new"
+                  required
                 />
                 <label class="form-check-label" for="newCustomer"
                   >I am a new customer</label
@@ -70,6 +71,7 @@
                   name="customerType"
                   id="existingCustomer"
                   value="existing"
+                  required
                 />
                 <label class="form-check-label" for="existingCustomer"
                   >I am an existing customer</label
@@ -153,6 +155,7 @@
               class="form-control"
               id="quantity"
               placeholder="Enter quantity"
+              required
             />
           </div>
 
@@ -167,6 +170,7 @@
               class="form-control"
               id="name"
               placeholder="Enter your name"
+              required
             />
           </div>
           <div class="form-group">
@@ -178,6 +182,7 @@
               class="form-control"
               id="phone"
               placeholder="Enter your phone number"
+              required
             />
           </div>
           <div class="form-group">
@@ -237,5 +242,50 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get form data
+          const customerType = document.querySelector(
+            'input[name="customerType"]:checked'
+          ).value;
+          const products = Array.from(
+            document.querySelectorAll('input[type="checkbox"]:checked')
+          )
+            .map((checkbox) => checkbox.value)
+            .join(", ");
+          const quantity = document.getElementById("quantity").value;
+          const name = document.getElementById("name").value;
+          const phone = document.getElementById("phone").value;
+          const email = document.getElementById("email").value;
+          const preferredContact = [];
+          if (document.getElementById("contactPhone").checked)
+            preferredContact.push("Phone");
+          if (document.getElementById("contactEmail").checked)
+            preferredContact.push("Email");
+          const comments = document.getElementById("comments").value;
+
+          // Construct the mailto URL with form data
+          const mailtoLink =
+            `mailto:sales@yasagro.com` +
+            `?subject=Enquiry / Order Request` +
+            `&body=` +
+            `Customer Type: ${customerType}\n` +
+            `Products: ${products}\n` +
+            `Quantity: ${quantity}\n` +
+            `Name: ${name}\n` +
+            `Phone: ${phone}\n` +
+            `Email: ${email}\n` +
+            `Preferred Contact Method: ${preferredContact.join(", ")}\n` +
+            `Comments: ${comments}`;
+
+          // Open the email client with the populated mailto link
+          window.location.href = mailtoLink;
+        });
+    </script>
   </body>
 </html>
