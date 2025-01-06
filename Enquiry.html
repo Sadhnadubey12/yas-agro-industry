@@ -28,6 +28,16 @@
       .required {
         color: red;
       }
+      .summary-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+      }
+      .summary-container h4 {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -46,10 +56,10 @@
         <form id="orderForm">
           <!-- Customer Type -->
           <div class="form-group">
-            <label
-              >1. Are you a new or existing customer?
-              <span class="required">*</span></label
-            >
+            <label>
+              1. Are you a new or existing customer?
+              <span class="required">*</span>
+            </label>
             <div>
               <div class="form-check">
                 <input
@@ -60,9 +70,9 @@
                   value="new"
                   required
                 />
-                <label class="form-check-label" for="newCustomer"
-                  >I am a new customer</label
-                >
+                <label class="form-check-label" for="newCustomer">
+                  I am a new customer
+                </label>
               </div>
               <div class="form-check">
                 <input
@@ -73,19 +83,19 @@
                   value="existing"
                   required
                 />
-                <label class="form-check-label" for="existingCustomer"
-                  >I am an existing customer</label
-                >
+                <label class="form-check-label" for="existingCustomer">
+                  I am an existing customer
+                </label>
               </div>
             </div>
           </div>
 
           <!-- Product Selection -->
           <div class="form-group">
-            <label
-              >2. What Products would you like to order?
-              <span class="required">*</span></label
-            >
+            <label>
+              2. What Products would you like to order?
+              <span class="required">*</span>
+            </label>
             <div>
               <div class="form-check">
                 <input
@@ -147,9 +157,9 @@
 
           <!-- Product Quantity -->
           <div class="form-group">
-            <label for="quantity"
-              >3. Product Quantity <span class="required">*</span></label
-            >
+            <label for="quantity">
+              3. Product Quantity <span class="required">*</span>
+            </label>
             <input
               type="number"
               class="form-control"
@@ -162,9 +172,9 @@
           <!-- Contact Information -->
           <h5>Contact Info</h5>
           <div class="form-group">
-            <label for="name"
-              >4. Your Name <span class="required">*</span></label
-            >
+            <label for="name">
+              4. Your Name <span class="required">*</span>
+            </label>
             <input
               type="text"
               class="form-control"
@@ -174,9 +184,9 @@
             />
           </div>
           <div class="form-group">
-            <label for="phone"
-              >5. Phone Number <span class="required">*</span></label
-            >
+            <label for="phone">
+              5. Phone Number <span class="required">*</span>
+            </label>
             <input
               type="tel"
               class="form-control"
@@ -197,10 +207,10 @@
 
           <!-- Preferred Contact Method -->
           <div class="form-group">
-            <label
-              >7. Preferred Contact Method
-              <span class="required">*</span></label
-            >
+            <label>
+              7. Preferred Contact Method
+              <span class="required">*</span>
+            </label>
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -236,6 +246,15 @@
           </button>
         </form>
       </div>
+
+      <!-- Summary Section (Initially Hidden) -->
+      <div id="summary" class="summary-container" style="display: none">
+        <h4>Order Summary</h4>
+        <div id="summaryContent"></div>
+        <a href="#" id="mailtoLink" class="btn btn-success btn-block"
+          >Send via Email</a
+        >
+      </div>
     </div>
 
     <!-- Bootstrap JS and Dependencies -->
@@ -269,22 +288,41 @@
             preferredContact.push("Email");
           const comments = document.getElementById("comments").value;
 
-          // Construct the mailto URL with form data
-          const mailtoLink =
-            `mailto:sales@yasagro.com` +
-            `?subject=Enquiry / Order Request` +
-            `&body=` +
-            `Customer Type: ${customerType}\n` +
-            `Products: ${products}\n` +
-            `Quantity: ${quantity}\n` +
-            `Name: ${name}\n` +
-            `Phone: ${phone}\n` +
-            `Email: ${email}\n` +
-            `Preferred Contact Method: ${preferredContact.join(", ")}\n` +
-            `Comments: ${comments}`;
+          // Display the summary in a neat format
+          const summaryContent = `
+            <p><strong>Customer Type:</strong> ${customerType}</p>
+            <p><strong>Products:</strong> ${products}</p>
+            <p><strong>Quantity:</strong> ${quantity}</p>
+            <p><strong>Your Name:</strong> ${name}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Preferred Contact Method:</strong> ${preferredContact.join(
+              ", "
+            )}</p>
+            <p><strong>Comments:</strong> ${comments}</p>
+          `;
+          document.getElementById("summaryContent").innerHTML = summaryContent;
 
-          // Open the email client with the populated mailto link
-          window.location.href = mailtoLink;
+          // Show the summary section
+          document.getElementById("summary").style.display = "block";
+          document.querySelector(".form-container").style.display = "none";
+
+          // Prepare mailto link
+          const mailtoLink =
+            `mailto:sales@yasagro.com?subject=Enquiry%20Order%20Request&body=` +
+            `Customer%20Type:%20${customerType}%0A` +
+            `Products:%20${products}%0A` +
+            `Quantity:%20${quantity}%0A` +
+            `Name:%20${name}%0A` +
+            `Phone:%20${phone}%0A` +
+            `Email:%20${email}%0A` +
+            `Preferred%20Contact%20Method:%20${preferredContact.join(
+              ", "
+            )}%0A` +
+            `Comments:%20${comments}`;
+
+          // Attach the mailto link to the button
+          document.getElementById("mailtoLink").href = mailtoLink;
         });
     </script>
   </body>
